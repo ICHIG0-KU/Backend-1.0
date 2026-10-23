@@ -1,0 +1,51 @@
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Diseño del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Título principal */
+h1 {
+    font-size: 42px;
+    text-align: center;
+    padding: 35px 50px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 2px solid #22c55e;
+    border-radius: 15px;
+
+    color: #22c55e;
+    text-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+h1:hover {
+    transform: scale(1.05);
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 26px;
+        padding: 25px;
+        margin: 20px;
+    }
+}

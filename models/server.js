@@ -15,9 +15,27 @@ export class Server {
 
   routes() {
     // segundo metodo de mi clase server.
-    this.app.get("/", (req, res) => {
-      res.send({
-         message: "Hola mundo desde mi servidor" 
+    this.app.get("/api", (req, res) => {
+      res.json({
+         message: "GET - Server", 
+        
+        });
+    });
+    this.app.post("/api", (req, res) => {
+      res.json({
+         message: "POST - Server", 
+        
+        });
+    });
+    this.app.put("/api", (req, res) => {
+      res.json({
+         message: "PUT - Server", 
+        
+        });
+    });
+    this.app.delete("/api", (req, res) => {
+      res.json({
+         message: "DELETE - Server", 
         
         });
     });
@@ -25,6 +43,7 @@ export class Server {
   //METODO 3 DE MI CLASE SERVER
   middlewares() {
     this.app.use(express.static("public"));
+    this.app.use(express.json());
   }
 
   //primer metodo de mi clase server 
